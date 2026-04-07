@@ -238,17 +238,5 @@ mod test {
         let circuit = VoterCircuit::new(config, input.clone());
         let prover = MockProver::run(15, &circuit, circuit.instances()).unwrap();
         prover.verify().unwrap();
-
-        // base_test()
-        //     .k(15)
-        //     .lookup_bits(14)
-        //     .expect_satisfied(true)
-        //     .run_builder(|pool, range| {
-        //         let ctx = pool.main();
-
-        //         let mut public_inputs = Vec::<AssignedValue<Fr>>::new();
-
-        //         voter_circuit(ctx, &range, input, &mut public_inputs);
-        //     })
     }
 }
